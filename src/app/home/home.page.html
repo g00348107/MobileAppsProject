@@ -1,20 +1,30 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Movie App
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-label >My fav Character is {{favCharacter}}</ion-label> <!--Displays what the User chose as their favourite-->
+  <ion-label>My fav Series is {{favSeries}}</ion-label>
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Movie App</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<img src="https://m.media-amazon.com/images/M/MV5BNzVlY2MwMjktM2E4OS00Y2Y3LWE3ZjctYzhkZGM3YzA1ZWM2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg" [routerLink]="['/fav-movies']"routerDirection="forward">
+<ion-label>Find your favourite Movies!</ion-label>
+<img src ="https://m.media-amazon.com/images/M/MV5BOTY4YjI2N2MtYmFlMC00ZjcyLTg3YjEtMDQyM2ZjYzQ5YWFkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg" [routerLink]="['/fav-characters']"routerDirection="forward">
+<ion-label>Find your favourite Characters!</ion-label>
+<img src= "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg" [routerLink]="['/fav-series']"routerDirection="forward">
+<ion-label>Find your favourite film series!</ion-label>
+<ion-button class="starWarsButton" [disabled]="!isEnabled" [routerLink]="['/fav-movies']"routerDirection="forward">View Star Wars Movies</ion-button>
+<ion-button class="avengerButton"[disabled]="!isWorking" [routerLink]="['/fav-movies']"routerDirection="forward">View Avengers Movies</ion-button>
+<ion-button class="jlButton" [disabled]="!canUse" [routerLink]="['/fav-movies']"routerDirection="forward">View Justice League Movies</ion-button>
+
+
+
 </ion-content>

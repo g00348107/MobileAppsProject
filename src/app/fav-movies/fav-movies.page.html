@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>What is your favourite Movie?</ion-title>
+    <ion-back-button></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<!--This set of cards will display the details for each movie-->
+
+<ion-card *ngFor = "let movie of StarWarsData">
+  <img src="{{movie.Poster}}">
+  <ion-card-header>
+  <ion-card-subtitle>{{movie.Year}}</ion-card-subtitle>
+  <ion-card-title>{{movie.Title}}</ion-card-title>
+  </ion-card-header>
+</ion-card>
+
+<ion-card *ngFor = "let movie of AvengersData">
+  <img src="{{movie.Poster}}">
+  <ion-card-header>
+  <ion-card-subtitle>{{movie.Year}}</ion-card-subtitle>
+  <ion-card-title>{{movie.Title}}</ion-card-title>
+  </ion-card-header>
+</ion-card>
+
+<ion-card *ngFor = "let movie of JusticeLeagueData">
+  <img src="{{movie.Poster}}">
+  <ion-card-header>
+  <ion-card-subtitle>{{movie.Year}}</ion-card-subtitle>
+  <ion-card-title>{{movie.Title}}</ion-card-title>
+  </ion-card-header>
+</ion-card>
+
+</ion-content>

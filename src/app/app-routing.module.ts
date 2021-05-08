@@ -11,6 +11,22 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'fav-movies',
+    loadChildren: () => import('./fav-movies/fav-movies.module').then( m => m.FavMoviesPageModule)
+  },
+  {
+    path: 'fav-characters',
+    loadChildren: () => import('./fav-characters/fav-characters.module').then( m => m.FavCharactersPageModule)
+  },
+  {
+    path: 'fav-series',
+    loadChildren: () => import('./fav-series/fav-series.module').then( m => m.FavSeriesPageModule)
+  },
+  {
+    path: 'characterlist',
+    loadChildren: () => import('./characterlist/characterlist.module').then( m => m.CharacterlistPageModule)
+  },
 ];
 
 @NgModule({

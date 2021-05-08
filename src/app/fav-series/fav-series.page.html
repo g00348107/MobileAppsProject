@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-label>What is your favourite Film Series?</ion-label>
+    <ion-back-button></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content><!--Allows the user to choose their favourite film series-->
+  <ion-label>My favourite series is {{favSeries}}</ion-label>
+  <ion-list>
+    <ion-radio-group [(ngModel)]="favSeries">
+      <ion-list-header>
+        <ion-label>
+          What is your favourite film series?
+        </ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>Star Wars</ion-label>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Star_wars2.svg">
+        <ion-radio value="starwars"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>The Avengers</ion-label>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/The_Avengers_Logo_Black.svg">
+        <ion-radio value="avengers"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Justice League</ion-label>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Justice_League_2017_film_logo.jpg">
+        <ion-radio value="justiceleague"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+  <ion-button (click)="updateSeries()">Update Series</ion-button>>
+</ion-content>

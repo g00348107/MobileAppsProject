@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Character Favourites</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-label>My favourite character is {{favCharacter}}</ion-label>
+<ion-list>
+  <ion-radio-group [(ngModel)]="favCharacter">
+    <ion-list-header>
+      <ion-label>
+        Who is your favourite Character?
+      </ion-label>
+    </ion-list-header>
+
+    <!--The user will be able to view and click on each image for their choice-->
+    <ion-item>
+      <ion-label>Iron Man</ion-label>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/MCM_London_May_2015_-_Iron_Man_%2817415750794%29.jpg">
+      <ion-radio value="ironman"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Black Widow</ion-label>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Black_Widow.svg">
+      <ion-radio value="blackwidow"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Batman</ion-label>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Dark_Knight_Rises.jpg">
+      <ion-radio value="batman"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Spider-man</ion-label>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Spiderman-mobile.jpg">
+      <ion-radio value="spiderman"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Rey Skywalker</ion-label>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Rey_Palpatine_at_Madame_Tussauds_London.jpg">
+      <ion-radio value="skywalker"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Darth Vader</ion-label>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Darth_Vader_%28starry_background%29.jpg">
+      <ion-radio value="darthvader"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Superman</ion-label>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Superman_presentation.jpg">
+      <ion-radio value="superman"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Aquaman</ion-label>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Jason_Momoa_%2835368584534%29.jpg">
+      <ion-radio value="aquaman"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Princess Leia</ion-label>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Leia_Organa.jpg">
+      <ion-radio value="leia"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+</ion-list>
+<ion-button (click)="updateCharacter()">Update Character</ion-button>>
+</ion-content>
